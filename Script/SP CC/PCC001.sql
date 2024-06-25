@@ -33,7 +33,7 @@ AS $$
     Local variables
 -------------------------------------------------------------------*/
 DECLARE
-    _R                   CC.PCC002_RESULTSET%Rowtype;
+    _R                   CC.PCC001_RESULTSET%Rowtype;
     _CD_ERRO             NUMERIC(3,0);
     _DS_ERRO             VARCHAR(255);
     _DT_DDVENC           NUMERIC(2,0);
