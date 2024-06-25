@@ -1,14 +1,14 @@
 SET SEARCH_PATH TO CC;
 
-DROP TYPE IF EXISTS PCC004_RESULTSET CASCADE;
+DROP TYPE IF EXISTS PCC006_RESULTSET CASCADE;
 
-CREATE TYPE PCC004_RESULTSET AS (
+CREATE TYPE PCC006_RESULTSET AS (
     CD_ERRO             NUMERIC(3,0),
     DS_ERRO             VARCHAR(255),
     NR_ORCAM            INTEGER
 );
 
-CREATE OR REPLACE FUNCTION PCC004 (
+CREATE OR REPLACE FUNCTION PCC006 (
 /*------------------------------------------------------------------
     Rotina de OK ADM Orçamento
 -------------------------------------------------------------------*/
@@ -19,14 +19,14 @@ CREATE OR REPLACE FUNCTION PCC004 (
     ENT_NR_CONTAM        INTEGER     , /* Conta Mensal             */
     ENT_NR_ORCAM         INTEGER       /* Orçamento                */
 )
-    RETURNS SETOF PCC004_RESULTSET
+    RETURNS SETOF PCC006_RESULTSET
 AS $$
 
 /*-------------------------------------------------------------------
     Local variables
 -------------------------------------------------------------------*/
 DECLARE
-    _R                   CC.PCC004_RESULTSET%Rowtype;
+    _R                   CC.PCC006_RESULTSET%Rowtype;
     _CD_ERRO             NUMERIC(3,0);
     _DS_ERRO             VARCHAR(255);
     _RESULTADO           RECORD      ;
